@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        body{
+          background:grey;
+        }
+            .range_box {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1px;
+                background-color: fffbfb;
+                border-radius: 40px;
+            }
+
+            .range {
+                width: 259px;
+                height: 35px;
+                appearance: none;
+                background: white;
+                outline: none;
+                border-radius: 35px;
+                overflow: hidden;
+            }
+
+            .range::-webkit-slider-thumb {
+                appearance: none;
+                width:50px;
+                height: 35px;
+                background: #5CA6FC;
+                border-radius: 35px;
+                border: 1px solid #fffbfb;
+                box-shadow: -407px 0 0 400px #FFFBFB;
+                cursor: mouse;
+            }
+
+            .rangeValue {
+                position: relative;
+                text-align: center;
+                width: 60px;
+                font-size: 1.25em;
+                color: #fff;
+                background: #022f52;
+                margin-left: 15px;
+                border-radius: 25px;
+                font-weight: 500;
+            }
+            .calcOrder > importantForm{
+              width: 330px;
+              height: 358px;
+              background: rgba(33,33,33,0.4);
+              border-radius: 35px;
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              flex-direction: column;
+            }
+    </style>
+  </head>
+  <body>
+    <div class="hHeader">
+        <h1>Ремонт квартир и домов в Томске</h1>
+        <p>С гарантией на все работы</p>
+      </div>
+      <div class="calcOrder">
+        <span id="messages"></span>
+
+        <form class="" action="localhost:3700/form.php" method="post" id="importantForm" name="formOk">
+          <h3>Рассчитать заказ</h3>
+          <input type="text" name="name" value="" placeholder="Имя" id="name">
+          <input type="text" name="tel" value="" placeholder="+7(__)__-__-__" id="tel">
+           <h3>Для отправки данных перетащите ползунок вправо</h3>
+              <div class="range_box">
+                  <input type="range" class="range" value="0" min="0" max="100" id="range">
+              </div>
+        <!--  <button type="submit" name="button" onclick="notRefresh()" id="notRef">Оставить заявку</button>-->
+          <div>
+            <input type="checkbox" name="" value="" checked> <span>Соглашаюсь с политикой безопасности</span>
+          </div>
+
+        </form>
+      </div>
+
+       <script src="humanOrNot.js"></script>
+  </body>
+</html>
